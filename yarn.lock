@@ -1564,6 +1564,11 @@
     webpack-format-messages "^2.0.5"
     yauzl "2.10.0"
 
+"@tarojs/plugin-platform-alipay-dd@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmmirror.com/@tarojs/plugin-platform-alipay-dd/download/@tarojs/plugin-platform-alipay-dd-0.1.2.tgz#05bfc51001d36227408949fb565c702e261264dd"
+  integrity sha512-QOW4Z54VU/EXr2rQlKI3Xb5kDPcrsPFyXQV49iPSTEPDqgxOjfBCnuhmjjjhNeWj1yCEHqA0COABbmBR0sofxw==
+
 "@tarojs/plugin-platform-alipay@3.3.20":
   version "3.3.20"
   resolved "https://registry.npmmirror.com/@tarojs/plugin-platform-alipay/download/@tarojs/plugin-platform-alipay-3.3.20.tgz#ab2950b6ebc77a8cbfe5340cd14481da2efd6582"

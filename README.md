@@ -21,6 +21,36 @@
 			// 适用于全局引入样式
 			// additionalData: "@import '~/src/style/index.less';",
 		},
+		postcss: {
+			autoprefixer: {
+				enable: true,
+				config: {
+				// autoprefixer 配置项
+				},
+			},
+			pxtransform: {
+				enable: true,
+				config: {
+
+				}
+			},
+			url: {
+					enable: true,
+					config: {
+					limit: 1024 // 设定转换尺寸上限
+				}
+			},
+			cssModules: {
+				enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+				config: {
+					namingPattern: 'module', // 转换模式，取值为 global/module
+					generateScopedName: '[name]__[local]___[hash:base64:5]'
+				}
+			}
+		},
+		miniCssExtractPluginOption: {
+			ignoreOrder: true,
+		},
 	},
 	h5: {
 		esnextModules: [/@antmjs[\\/]vantui/],
@@ -35,6 +65,27 @@
 			},
 			// 适用于全局引入样式
 			// additionalData: "@import '~/src/style/index.less';",
+		},
+		postcss: {
+			autoprefixer: {
+				enable: true,
+				config: {
+				}
+			},
+			pxtransform: {
+				enable: true,
+				config: {},
+			},
+			cssModules: {
+				enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+				config: {
+					namingPattern: 'module', // 转换模式，取值为 global/module
+					generateScopedName: '[name]__[local]___[hash:base64:5]'
+				}
+			}
+		},
+		miniCssExtractPluginOption: {
+			ignoreOrder: true,
 		},
 	}
 }

@@ -41,6 +41,12 @@ const config = {
       // additionalData: "@import '~/src/style/index.less';",
     },
     postcss: {
+      autoprefixer: {
+        enable: true,
+        config: {
+          // autoprefixer 配置项
+        },
+      },
       pxtransform: {
         enable: true,
         config: {
@@ -60,7 +66,10 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    miniCssExtractPluginOption: {
+      ignoreOrder: true,
+    },
   },
   h5: {
     webpackChain (chain) {
@@ -87,6 +96,10 @@ const config = {
         config: {
         }
       },
+      pxtransform: {
+        enable: true,
+        config: {},
+      },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
         config: {
@@ -94,8 +107,14 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
-  }
+    },
+    miniCssExtractPluginOption: {
+      ignoreOrder: true,
+    },
+  },
+  plugins: [
+    '@tarojs/plugin-platform-alipay-dd',
+  ],
 }
 
 module.exports = function (merge) {
