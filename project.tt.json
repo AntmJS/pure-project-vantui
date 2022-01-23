@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "pure-project-vantui",
+  "appid": "testAppId",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}
