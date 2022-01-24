@@ -1,8 +1,10 @@
-#
+# 说明
 
-这是一个Taro纯净版的模版工程，里面集成了vantui组件库，并且临时解决了Taro工程使用usage报错的问题
+这是一个Taro纯净版的模版工程，里面集成了vantui组件库，并且解决了Taro工程使用usage报错的问题
 
-注意：Taro工程的项目名称定义的时候不要带上taro关键字(会影响编译性能)，具体原因可以看config/webpack/miniChain.js
+* 注意：Taro工程的项目名称定义的时候不要带上taro关键字(会影响编译性能)，具体原因可以看config/webpack/miniChain.js
+
+* 注意：main分支Taro版本为3.4.0；3.3.x分支Taro版本为3.3.20，请按条件使用
 
 ## update config/index.js
 
