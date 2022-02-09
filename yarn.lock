@@ -7,30 +7,30 @@
   resolved "https://registry.npmmirror.com/@antmjs/iconfont/download/@antmjs/iconfont-1.17.5.tgz#4c52b0f9eb0b68a4717f7dab3b357b039f0d5f19"
   integrity sha512-ZlLw9V3KF1aAmwsZBKvH/jZs0z5ByTd34hO+KXFB4peR8D5FFm2ivJB2AlzITyQBhioF2Gh0DRHVJAWZej7HcQ==
 
-"@antmjs/mini-fix@^1.17.5":
-  version "1.17.5"
-  resolved "https://registry.npmmirror.com/@antmjs/mini-fix/download/@antmjs/mini-fix-1.17.5.tgz#330816b0395f532bf31faa04eb9e2cdd31e65ae5"
-  integrity sha512-BS7QpLmhKNgJvlKLh0CBJe2vjrXfQUFBaNl5sRsvmvcfmp1vSbRhJfUpe3poKflgQtvMXSzwo5oUREMFDnP8bQ==
+"@antmjs/mini-fix@^1.17.6":
+  version "1.17.6"
+  resolved "https://registry.npmmirror.com/@antmjs/mini-fix/-/mini-fix-1.17.6.tgz#a52f75ace1e5534aa5224263ec3f09e8f0e70413"
+  integrity sha512-9ZczklHXmy1c30+aa/oU3Fktn3bKik3D4Hr6tuoDAT3rQkofVuKe4g+Yt5vL5chFkhq6Rn8T+DriYpbGeYENVw==
   dependencies:
-    "@antmjs/utils" "1.17.5"
+    "@antmjs/utils" "1.17.6"
     "@babel/runtime-corejs3" "^7.14.7"
 
-"@antmjs/plugin-mini-fix@^1.17.5":
-  version "1.17.5"
-  resolved "https://registry.npmmirror.com/@antmjs/plugin-mini-fix/download/@antmjs/plugin-mini-fix-1.17.5.tgz#3bf54cb0d3bc2a4c64fc9428d75f66368264fe27"
-  integrity sha512-VzKDXQaSjHJbnBuCDy1Np4YeTXAogcIjpPUfso+dbffvx2wkdbT+Yx8OKfg+Uf1+/XYf+PxeWgZQ5gLfWTAmtQ==
+"@antmjs/plugin-mini-fix@^1.17.6":
+  version "1.17.6"
+  resolved "https://registry.npmmirror.com/@antmjs/plugin-mini-fix/-/plugin-mini-fix-1.17.6.tgz#dd6bc1222851a21b20a929bb4d25bd4abc89d370"
+  integrity sha512-ntEBD8Z/YU6EmKZZCPoLDvu/hYhcO1v1s3fI3c9jxB3SF5AdGZ26keiQOl81o5gmSXkzt9CfghOBXuTQ5veKHg==
 
-"@antmjs/utils@1.17.5":
-  version "1.17.5"
-  resolved "https://registry.npmmirror.com/@antmjs/utils/download/@antmjs/utils-1.17.5.tgz#ea0914ae4ec5bab4e8dd9de29d8e2a8797599b3e"
-  integrity sha512-+ALwB8be8vljrP+jHXPCCiGCeYoPgsj0AFtHIMPld9MFayIZP+7InB7n8N5O4KdF9gr2twRBMGzdLXw1gOr0rA==
+"@antmjs/utils@1.17.6":
+  version "1.17.6"
+  resolved "https://registry.npmmirror.com/@antmjs/utils/-/utils-1.17.6.tgz#db853e778ba5542c6d721793c650c2e922b5a861"
+  integrity sha512-CESaUuOigp1gnCd4uoGTaxuBEAV8c6uI8T9zDCkKPCbKU036lCOHTi/ZzB4i21ofZKNXocTaLoaS3WhgoOhy6w==
   dependencies:
     "@babel/runtime-corejs3" "^7.14.7"
 
-"@antmjs/vantui@^1.4.9":
-  version "1.4.9"
-  resolved "https://registry.npmmirror.com/@antmjs/vantui/download/@antmjs/vantui-1.4.9.tgz#aede9503cde4d37e231ce4ad72d3ffb41c4139fc"
-  integrity sha512-lvim+BfSFSzTNomcj9OSxqah5wOlUvcqoqJuQ9oIJ3vcYoUXTwIwMbVSP+b/7t5gLsHI9F3+TsI43R2ZFs3T5Q==
+"@antmjs/vantui@^1.4.11":
+  version "1.4.11"
+  resolved "https://registry.npmmirror.com/@antmjs/vantui/-/vantui-1.4.11.tgz#b2f767732155ea4e49b01823dd2620adb5473e17"
+  integrity sha512-uGN5KAi6pVLxk3ytreG6Evtr+6CXE7hgL1lNOx66KNq1fvk9XNaCrX/8L/HrJaJ7dpKHfQ8qHrZ6tUtE8yKk2A==
   dependencies:
     "@antmjs/iconfont" "1.17.5"
     "@babel/runtime-corejs3" "^7.14.7"
@@ -1607,6 +1607,11 @@
   dependencies:
     "@tarojs/service" "3.4.1"
     "@tarojs/shared" "3.4.1"
+
+"@tarojs/plugin-platform-kwai@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmmirror.com/@tarojs/plugin-platform-kwai/download/@tarojs/plugin-platform-kwai-1.0.1.tgz#73468f99509d0400102ca279b59485048b23ec90"
+  integrity sha512-+Wzkb/0UMPLdOS3fgh5FkbZ39bUcFMseTJrhkV+gD/f6SojcpkKiz4BrQvF3Wu6yFOHTE3CfCcLTyw1ggYzPZQ==
 
 "@tarojs/plugin-platform-qq@3.4.1":
   version "3.4.1"

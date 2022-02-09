@@ -31,6 +31,7 @@ const config = {
     lessLoaderOption: {
       lessOptions: {
         modifyVars: {
+          // kwai: 1,
           hack: `true; @import "${path.join(
             process.cwd(),
             'src/style/index.less',
@@ -50,7 +51,6 @@ const config = {
       pxtransform: {
         enable: true,
         config: {
-
         }
       },
       url: {
@@ -114,6 +114,7 @@ const config = {
   },
   plugins: [
     '@tarojs/plugin-platform-alipay-dd',
+    '@tarojs/plugin-platform-kwai',
   ],
 }
 

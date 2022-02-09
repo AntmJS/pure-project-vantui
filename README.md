@@ -4,7 +4,7 @@
 
 * 注意：Taro工程的项目名称定义的时候不要带上taro关键字(会影响编译性能)，具体原因可以看config/webpack/miniChain.js
 
-* 注意：main分支Taro版本为3.4.0；3.3.x分支Taro版本为3.3.20，请按条件使用
+* 注意：main分支Taro版本为3.4.1；3.3.x分支Taro版本为3.3.20，请按条件使用
 
 ## update config/index.js
 

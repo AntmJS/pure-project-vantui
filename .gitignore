@@ -1,9 +1,11 @@
 dist/
 weapp/
 alipay/
+kwai/
 dd/
 qq/
 tt/
+swan/
 deploy_versions/
 .temp/
 .rn_temp/

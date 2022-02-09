@@ -14,19 +14,15 @@
     "build:alipay": "npx taro build --type alipay",
     "build:tt": "npx taro build --type tt",
     "build:h5": "npx taro build --type h5",
-    "build:rn": "npx taro build --type rn",
     "build:qq": "npx taro build --type qq",
-    "build:jd": "npx taro build --type jd",
-    "build:quickapp": "npx taro build --type quickapp",
+    "build:kwai": "npx taro build --type kwai",
     "dev:weapp": "npm run build:weapp -- --watch",
     "dev:swan": "npm run build:swan -- --watch",
     "dev:alipay": "npm run build:alipay -- --watch",
     "dev:tt": "npm run build:tt -- --watch",
     "dev:h5": "npm run build:h5 -- --watch",
-    "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
-    "dev:jd": "npm run build:jd -- --watch",
-    "dev:quickapp": "npm run build:quickapp -- --watch"
+    "dev:kwai": "npm run build:kwai -- --watch"
   },
   "browserslist": [
     "last 3 versions",
@@ -35,8 +31,8 @@
   ],
   "author": "",
   "dependencies": {
-    "@antmjs/mini-fix": "^1.17.5",
-    "@antmjs/vantui": "^1.4.9",
+    "@antmjs/mini-fix": "^1.17.6",
+    "@antmjs/vantui": "^1.4.11",
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "3.4.1",
     "@tarojs/react": "3.4.1",
@@ -46,12 +42,13 @@
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
-    "@antmjs/plugin-mini-fix": "^1.17.5",
+    "@antmjs/plugin-mini-fix": "^1.17.6",
     "@babel/core": "^7.8.0",
     "@tarojs/cli": "3.4.1",
     "@tarojs/mini-runner": "3.4.1",
     "@tarojs/plugin-framework-react": "3.4.1",
     "@tarojs/plugin-platform-alipay-dd": "^0.1.2",
+    "@tarojs/plugin-platform-kwai": "^1.0.1",
     "@tarojs/webpack-runner": "3.4.1",
     "@types/react": "^17.0.2",
     "@types/webpack-env": "^1.13.6",
