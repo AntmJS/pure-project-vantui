@@ -1,12 +1,19 @@
-# 说明
+## 说明
 
-这是一个Taro纯净版的模版工程，里面集成了vantui组件库，并且解决了Taro工程使用usage报错的问题
+这是一个Taro纯净版的模版工程，里面仅集成了vantui组件库以及修复各端兼容性问题
 
-* 注意：Taro工程的项目名称定义的时候不要带上taro关键字(会影响编译性能)，具体原因可以看config/webpack/miniChain.js
+* 注意：Taro工程的项目名称定义的时候不要带上taro关键字(会影响编译性能)。
 
-* 注意：main分支Taro版本为3.4.1；3.3.x分支Taro版本为3.3.20，请按条件使用
+> 原因是如果项目名带有taro字样，exculde是不包含在内的，相当于所有的node_modules每次都会重新编译
 
-## update config/index.js
+```js
+chain.module
+  .rule('script')
+  .exclude.clear()
+  .add((filename) => /css-loader/.test(filename) || (/node_modules/.test(filename) && !(/taro/.test(filename) && !/tarojs[\\/](runtime|shared)/.test(filename))))
+```
+
+### update config/index.js
 
 ```js
 {
@@ -93,7 +100,7 @@
 }
 ```
 
-## add babel-plugin-import and @antmjs/vantui. and update babel.config.js
+### add babel-plugin-import and @antmjs/vantui. and update babel.config.js
 
 ```js
 {
@@ -112,7 +119,7 @@
 }
 ```
 
-## use useBuiltIns: 'usage' in babel.config.js. update config/index.js
+### use useBuiltIns: 'usage' in babel.config.js. update config/index.js
 
 > 关于Taro默认的babel配置里面使用useBuiltIns: 'usage'会报错的问题，可以参考下面的解决方案
 
