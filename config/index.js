@@ -31,7 +31,6 @@ const config = {
     lessLoaderOption: {
       lessOptions: {
         modifyVars: {
-          // kwai: 1,
           hack: `true; @import "${path.join(
             process.cwd(),
             'src/style/index.less',

@@ -1,6 +1,13 @@
 {
-  "appid": "17767960",
   "projectname": "pure-project-vantui",
+  "miniprogramRoot": "./",
+  "compilation-args": {
+    "common": {
+      "ignorePrefixCss": true,
+      "ignoreTransJs": true,
+      "ignoreUglify": true
+    }
+  },
   "setting": {
     "urlCheck": false,
     "es6": false,
