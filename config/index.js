@@ -35,7 +35,10 @@ const config = {
           hack: `true; @import "${path.join(
             process.cwd(),
             'src/style/index.less',
-          )}";`,
+          )}";${process.env.TARO_ENV === 'kwai' ? `@import "${path.join(
+            process.cwd(),
+            'src/style/kwai.less',
+          )}";` : ''}`,
         },
       },
       // 适用于全局引入样式
