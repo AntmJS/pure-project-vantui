@@ -15,6 +15,7 @@
     "build:tt": "npx taro build --type tt",
     "build:h5": "npx taro build --type h5",
     "build:qq": "npx taro build --type qq",
+    "build:dd": "npx taro build --type dd",
     "build:kwai": "npx taro build --type kwai",
     "dev:weapp": "npm run build:weapp -- --watch",
     "dev:swan": "npm run build:swan -- --watch",
@@ -22,6 +23,7 @@
     "dev:tt": "npm run build:tt -- --watch",
     "dev:h5": "npm run build:h5 -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
+    "dev:dd": "npm run build:dd -- --watch",
     "dev:kwai": "npm run build:kwai -- --watch"
   },
   "browserslist": [

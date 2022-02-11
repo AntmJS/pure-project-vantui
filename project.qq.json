@@ -2,7 +2,6 @@
   "miniprogramRoot": "./",
   "projectname": "pure-project-vantui",
   "description": "",
-  "appid": "touristappid",
   "setting": {
     "urlCheck": true,
     "es6": false,

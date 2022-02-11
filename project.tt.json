@@ -1,8 +1,8 @@
 {
   "miniprogramRoot": "./",
   "projectname": "pure-project-vantui",
-  "appid": "testAppId",
   "setting": {
+    "urlCheck": true,
     "es6": false,
     "minified": false,
     "postcss": false
