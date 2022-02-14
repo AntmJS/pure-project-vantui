@@ -6,11 +6,11 @@ module.exports = function (chain) {
   chain.module
     .rule('script')
     .exclude.clear()
-    .add((filename) => /css-loader/.test(filename) || (/node_modules/.test(filename) && !(/taro/.test(filename) && !/tarojs[\\/](runtime|shared)/.test(filename))))
+    .add((filename) => /css-loader/.test(filename) || (/node_modules/.test(filename) && !(/taro/.test(filename) && !/tarojs[\\/](runtime|shared|plugin-platform)/.test(filename))))
 
   chain.module
     .rule('taro-script')
-    .test(/tarojs[\\/](runtime|shared)/i)
+    .test(/tarojs[\\/](runtime|shared|plugin-platform)/i)
     .use('taro-loader')
     .loader(require.resolve('babel-loader'))
     .options({
