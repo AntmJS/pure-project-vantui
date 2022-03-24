@@ -6,7 +6,7 @@ module.exports = function (chain) {
   chain.module
     .rule('script')
     .exclude.clear()
-    .add((filename) => /css-loader/.test(filename) || (/node_modules/.test(filename) && !(/taro/.test(filename) && !/tarojs[\\/](runtime|shared|plugin-platform)/.test(filename))))
+    .add((filename) => /webpack[\\/]buildin[\\/]global\.js/.test(filename) || /css-loader/.test(filename) || (/node_modules/.test(filename) && !(/taro/.test(filename) && !/tarojs[\\/](runtime|shared|plugin-platform)/.test(filename))))
 
   chain.module
     .rule('taro-script')
