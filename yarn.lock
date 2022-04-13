@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@antmjs/iconfont@1.17.5":
-  version "1.17.5"
-  resolved "https://registry.npmmirror.com/@antmjs/iconfont/download/@antmjs/iconfont-1.17.5.tgz#4c52b0f9eb0b68a4717f7dab3b357b039f0d5f19"
-  integrity sha512-ZlLw9V3KF1aAmwsZBKvH/jZs0z5ByTd34hO+KXFB4peR8D5FFm2ivJB2AlzITyQBhioF2Gh0DRHVJAWZej7HcQ==
+"@antmjs/iconfont@1.18.1":
+  version "1.18.1"
+  resolved "https://registry.npmmirror.com/@antmjs/iconfont/-/iconfont-1.18.1.tgz#9c8e33560636348238e1436297817662b3469829"
+  integrity sha512-QfrkwaEQhCW6KdA5pRSToTnLcK9gvoCr2b0hTXxeVXD8muK+QES+jAGLCdk+NO9QiNQxMXSEmPVQ81nHipyc5g==
 
 "@antmjs/mini-fix@^1.18.2":
   version "1.18.2"
@@ -27,17 +27,19 @@
   dependencies:
     "@babel/runtime-corejs3" "^7.14.7"
 
-"@antmjs/vantui@^1.7.0":
-  version "1.7.0"
-  resolved "https://registry.npmmirror.com/@antmjs/vantui/-/vantui-1.7.0.tgz#36835581cdd97ed29c60998db1626f921a6f29e5"
-  integrity sha512-tPvc+7DMAsLAkCkGgAeo7MR5bYxnMU8g6ZMRy0Yu5oQj0ph6mHuf65FFeleJ/Yy6HHi240ysGBxpajMEQCl3/Q==
+"@antmjs/vantui@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.npmmirror.com/@antmjs/vantui/-/vantui-1.8.0.tgz#52efc352ca316a778fb09366dfff11776c19b644"
+  integrity sha512-mMIpgVp6e7lP4eNkrDGKhWPOPE+ma1SD4/bxHCqi64e3AkMF60GAjeoploZTU6cSkQE8CiC+pg92baCdjRX60Q==
   dependencies:
-    "@antmjs/iconfont" "1.17.5"
+    "@antmjs/iconfont" "1.18.1"
     "@babel/runtime-corejs3" "^7.14.7"
+    "@react-spring/web" "^9.4.4"
     "@vant/icons" "^1.7.1"
     classnames "^2.3.1"
     dayjs "^1.10.6"
     rc-util "^5.14.0"
+    use-deep-compare-effect "^1.8.1"
 
 "@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"
@@ -1314,6 +1316,52 @@
   dependencies:
     "@prefresh/core" "^1.3.1"
     "@prefresh/utils" "^1.1.0"
+
+"@react-spring/animated@~9.4.4":
+  version "9.4.4"
+  resolved "https://registry.npmmirror.com/@react-spring/animated/-/animated-9.4.4.tgz#15e21923e55c06ca2bcea432869b91b2f8b07519"
+  integrity sha512-e9xnuBaUTD+NolKikUmrGWjX8AVCPyj1GcEgjgq9E+0sXKv46UY7cm2EmB6mUDTxWIDVKebARY++xT4nGDraBQ==
+  dependencies:
+    "@react-spring/shared" "~9.4.4"
+    "@react-spring/types" "~9.4.4"
+
+"@react-spring/core@~9.4.4":
+  version "9.4.4"
+  resolved "https://registry.npmmirror.com/@react-spring/core/-/core-9.4.4.tgz#7730988cec7302ba6e0977cf4c08c30249d95622"
+  integrity sha512-llgb0ljFyjMB0JhWsaFHOi9XFT8n1jBMVs1IFY2ipIBerWIRWrgUmIpakLPHTa4c4jwqTaDSwX90s2a0iN7dxQ==
+  dependencies:
+    "@react-spring/animated" "~9.4.4"
+    "@react-spring/rafz" "~9.4.4"
+    "@react-spring/shared" "~9.4.4"
+    "@react-spring/types" "~9.4.4"
+
+"@react-spring/rafz@~9.4.4":
+  version "9.4.4"
+  resolved "https://registry.npmmirror.com/@react-spring/rafz/-/rafz-9.4.4.tgz#736c9ed1099baebeea20c357b9700b01b83ea9de"
+  integrity sha512-5ki/sQ06Mdf8AuFstSt5zbNNicRT4LZogiJttDAww1ozhuvemafNWEHxhzcULgCPCDu2s7HsroaISV7+GQWrhw==
+
+"@react-spring/shared@~9.4.4":
+  version "9.4.4"
+  resolved "https://registry.npmmirror.com/@react-spring/shared/-/shared-9.4.4.tgz#e1ae00a77d170d86d77d9a19dc7015bdddc2d26f"
+  integrity sha512-ySVgScDZlhm/+Iy2smY9i/DDrShArY0j6zjTS/Re1lasKnhq8qigoGiAxe8xMPJNlCaj3uczCqHy3TY9bKRtfQ==
+  dependencies:
+    "@react-spring/rafz" "~9.4.4"
+    "@react-spring/types" "~9.4.4"
+
+"@react-spring/types@~9.4.4":
+  version "9.4.4"
+  resolved "https://registry.npmmirror.com/@react-spring/types/-/types-9.4.4.tgz#97c69881788e624d7cc68d4385fdaa9b5fd20642"
+  integrity sha512-KpxKt/D//q/t/6FBcde/RE36LKp8PpWu7kFEMLwpzMGl9RpcexunmYOQJWwmJWtkQjgE1YRr7DzBMryz6La1cQ==
+
+"@react-spring/web@^9.4.4":
+  version "9.4.4"
+  resolved "https://registry.npmmirror.com/@react-spring/web/-/web-9.4.4.tgz#0d13356e61c1d47e83a36112e19e5db691f3fbe5"
+  integrity sha512-iJmOLdhcuizriUlu/xqBc5y8KaFts+UI+iC+GxyTwBtzxA9czKiSAZW2ESuhG8stafa3jncwjfTQQp84KN36cw==
+  dependencies:
+    "@react-spring/animated" "~9.4.4"
+    "@react-spring/core" "~9.4.4"
+    "@react-spring/shared" "~9.4.4"
+    "@react-spring/types" "~9.4.4"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -4980,6 +5028,11 @@ deps-regex@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npmmirror.com/deps-regex/download/deps-regex-0.1.4.tgz#518667b7691460a5e7e0a341be76eb7ce8090184"
   integrity sha1-UYZnt2kUYKXn4KNBvnbrfOgJAYQ=
+
+dequal@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npmmirror.com/dequal/-/dequal-2.0.2.tgz#85ca22025e3a87e65ef75a7a437b35284a7e319d"
+  integrity sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==
 
 des.js@^1.0.0:
   version "1.0.1"
@@ -13551,6 +13604,14 @@ url@^0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
+
+use-deep-compare-effect@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.npmmirror.com/use-deep-compare-effect/-/use-deep-compare-effect-1.8.1.tgz#ef0ce3b3271edb801da1ec23bf0754ef4189d0c6"
+  integrity sha512-kbeNVZ9Zkc0RFGpfMN3MNfaKNvcLNyxOAAd9O4CBZ+kCBXXscn9s/4I+8ytUER4RDpEYs5+O6Rs4PqiZ+rHr5Q==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    dequal "^2.0.2"
 
 use@^3.1.0:
   version "3.1.1"
