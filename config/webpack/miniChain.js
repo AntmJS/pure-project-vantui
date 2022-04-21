@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable import/no-commonjs */
 const npath = require('path')
 const MiniFixPlugin = require('@antmjs/plugin-mini-fix')
@@ -23,7 +24,16 @@ module.exports = function (chain) {
   chain.module
     .rule('script')
     .exclude.clear()
-    .add((filename) => /webpack[\\/]buildin[\\/]global\.js/.test(filename) || /css-loader/.test(filename) || (/node_modules/.test(filename) && !(/taro/.test(filename) && !/tarojs[\\/](runtime|shared|plugin-platform)/.test(filename))))
+    .add(
+      (filename) =>
+        /webpack[\\/]buildin[\\/]global\.js/.test(filename) ||
+        /css-loader/.test(filename) ||
+        (/node_modules/.test(filename) &&
+          !(
+            /taro/.test(filename) &&
+            !/tarojs[\\/](runtime|shared|plugin-platform)/.test(filename)
+          )),
+    )
 
   chain.module
     .rule('taro-script')
@@ -32,12 +42,15 @@ module.exports = function (chain) {
     .loader(require.resolve('babel-loader'))
     .options({
       presets: [
-        ['taro', {
-          framework: 'react',
-          ts: true,
-          // 这里必须要用false即runtime和shared这两个包不能进行polyfill
-          useBuiltIns: false,
-        }]
-      ]
+        [
+          'taro',
+          {
+            framework: 'react',
+            ts: true,
+            // 这里必须要用false即runtime和shared这两个包不能进行polyfill
+            useBuiltIns: false,
+          },
+        ],
+      ],
     })
 }

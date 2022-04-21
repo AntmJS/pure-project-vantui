@@ -14,8 +14,13 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: process.env.TARO_ENV === 'h5' ? 'dist' : process.env.TARO_ENV,
-  plugins: [],
+  alias: {
+    '@': path.resolve(process.cwd(), 'src'),
+    react: path.resolve(process.cwd(), './node_modules/react'),
+  },
   defineConstants: {
+    // 解决Recoil报错问题
+    Window: 'function () {}',
   },
   copy: {
     patterns: [
