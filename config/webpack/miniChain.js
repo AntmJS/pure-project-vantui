@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable import/no-commonjs */
 const npath = require('path')
+const pxtransform = require("postcss-pxtransform")
 const MiniFixPlugin = require('@antmjs/plugin-mini-fix')
 
 module.exports = function (chain) {
@@ -53,4 +54,51 @@ module.exports = function (chain) {
         ],
       ],
     })
+    const lessRule = chain.module.rules.get('less')
+    const lessRuleCfg = {
+      test: /@antmjs[\\/]vantui(.+?)\.less$/,
+      oneOf: [{
+        use: []
+      }]
+    }
+    lessRule.toConfig().oneOf[0].use.map((use) => {
+      if (/postcss-loader/.test(use.loader)) {
+        const newUse = {
+          loader: use.loader,
+          options: {
+            sourceMap: use.options.sourceMap,
+            postcssOptions: {
+              plugins: []
+            }
+          }
+        }
+        use.options.postcssOptions.plugins.map((xitem) => {
+          if (xitem.postcssPlugin === 'postcss-pxtransform') {
+            newUse.options.postcssOptions.plugins.push(
+              pxtransform({
+                platform: process.env.TARO_ENV,
+                // 这里和你config的配置保持一致
+                designWidth: 750,
+                // 这里和你config的配置保持一致
+                deviceRatio: {
+                  640: 2.34 / 2,
+                  750: 1,
+                  828: 1.81 / 2
+                },
+                selectorBlackList: [],
+              })
+            )
+          } else {
+            newUse.options.postcssOptions.plugins.push(xitem)
+          }
+
+        })
+        lessRuleCfg.oneOf[0].use.push({ ...newUse })
+      } else {
+        lessRuleCfg.oneOf[0].use.push({ ...use })
+      }
+
+    })
+    chain.module.rule('vantuiLess').merge(lessRuleCfg)
+    lessRule.exclude.clear().add(/@antmjs[\\/]vantui/)
 }

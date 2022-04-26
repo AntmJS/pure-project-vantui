@@ -6,11 +6,12 @@ const h5Chain = require('./webpack/h5Chain')
 const config = {
   projectName: 'pure-project-vantui',
   date: '2022-1-23',
-  designWidth: 750,
+  designWidth: 375,
   deviceRatio: {
     640: 2.34 / 2,
     750: 1,
-    828: 1.81 / 2
+    828: 1.81 / 2,
+    375: 2 / 1,
   },
   sourceRoot: 'src',
   outputRoot: process.env.TARO_ENV === 'h5' ? 'dist' : process.env.TARO_ENV,
