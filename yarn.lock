@@ -14,30 +14,30 @@
   resolved "https://registry.npmmirror.com/@antmjs/iconfont/-/iconfont-1.18.1.tgz#9c8e33560636348238e1436297817662b3469829"
   integrity sha512-QfrkwaEQhCW6KdA5pRSToTnLcK9gvoCr2b0hTXxeVXD8muK+QES+jAGLCdk+NO9QiNQxMXSEmPVQ81nHipyc5g==
 
-"@antmjs/mini-fix@^1.18.2":
-  version "1.18.4"
-  resolved "https://registry.npmmirror.com/@antmjs/mini-fix/-/mini-fix-1.18.4.tgz#ea60363467b3f9dc2de1ec1b2a5f03c55bb4616e"
-  integrity sha512-I53d+xWMq/jlbq/Cz3kOnEzUyeG6xleLFtVuYVcDgRHaLjAkfc/PBa3Rd+RHZiRZG4EnfiAZnhE2Lu54xigO9A==
+"@antmjs/mini-fix@^1.19.2":
+  version "1.19.2"
+  resolved "https://registry.npmmirror.com/@antmjs/mini-fix/-/mini-fix-1.19.2.tgz#a2c180032634fc10024ca57bd56c21671e026086"
+  integrity sha512-ZfNgUqs0B2uoh2Krh3Q77tsOXYrbQorb/+3SFfEVi9h3S9A/ey4sg37dWwtE2+mNdsH37Koe5YWkZIjzHWMUBw==
   dependencies:
-    "@antmjs/utils" "1.18.4"
+    "@antmjs/utils" "1.19.2"
     "@babel/runtime-corejs3" "^7.14.7"
 
-"@antmjs/plugin-mini-fix@^1.18.2":
-  version "1.18.4"
-  resolved "https://registry.npmmirror.com/@antmjs/plugin-mini-fix/-/plugin-mini-fix-1.18.4.tgz#8c426421444c975b07658ba6643f53ea4d0a3420"
-  integrity sha512-iaMjLwdtzjIWyHmu5EDFMGx0g5CNGvBeYlb351lgr/hwdIcUnGuMMXgFKkwOwb+xdvLdtv4MlD/04tWSuMEaHA==
+"@antmjs/plugin-mini-fix@^1.19.2":
+  version "1.19.2"
+  resolved "https://registry.npmmirror.com/@antmjs/plugin-mini-fix/-/plugin-mini-fix-1.19.2.tgz#3d18da551c639922d1b7a3229aced37f44e466d7"
+  integrity sha512-0RcYvyaH/aqkMWdu3ncPVViMaztabIrVQSmmBsBeM/Qj0bia1uIgDED7C7ECYTKI5+fLsLUMMOp84aBbLIQGcA==
 
-"@antmjs/utils@1.18.4":
-  version "1.18.4"
-  resolved "https://registry.npmmirror.com/@antmjs/utils/-/utils-1.18.4.tgz#394c5d39c8ab1c275866b459ac72229c3720f08f"
-  integrity sha512-wJrO7AkYgtbGWyA0zXUw0O/KYURiWoQdvGxlYxjE+H2nMjNOf0h8+XSdxCOOxoJaNRGNO9noOF+yupopYBG0HQ==
+"@antmjs/utils@1.19.2":
+  version "1.19.2"
+  resolved "https://registry.npmmirror.com/@antmjs/utils/-/utils-1.19.2.tgz#3113421640e5b42690c4fc94d0dc1077f39282f6"
+  integrity sha512-ifn4cxUOISGofnXXSS0DRpoPbTiac+UdetioyKuatnd5Yl82aAfWfbsxhdQfT5PYuIkLviHr9L/Ydxpzp4q/ig==
   dependencies:
     "@babel/runtime-corejs3" "^7.14.7"
 
-"@antmjs/vantui@^1.9.2":
-  version "1.9.2"
-  resolved "https://registry.npmmirror.com/@antmjs/vantui/-/vantui-1.9.2.tgz#70b2d817ae117deb68c5cf030d7c29d62d307c43"
-  integrity sha512-pxmPIRx2jvswGB5bKiOWsxegG7ynfqbnk/bkVW8k03t00hp+cYD7xZfYVe5v60gcC6p21TcnKWM0OLZLAQcJmw==
+"@antmjs/vantui@^1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npmmirror.com/@antmjs/vantui/-/vantui-1.9.10.tgz#5a3c3d0148749d614837a61e6b93dbd505f193ac"
+  integrity sha512-lW4Dk5IqvW4OXWHkli3LXRPkdSgTQoZpY8ky9854nQzDY6zRKzMn6DrUmrjr1QmusrdoR1na1ak9OpmTBcOfpw==
   dependencies:
     "@antmjs/iconfont" "1.18.1"
     "@babel/runtime-corejs3" "^7.14.7"
@@ -7920,8 +7920,6 @@ is-path-in-cwd@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmmirror.com/is-path-in-cwd/-/is-path-in-cwd-2.1.0.tgz#bfe2dca26c69f397265a4009963602935a053acb"
   integrity sha512-rNocXHgipO+rvnP6dk3zI20RpOtrAM/kzbB258Uw5BWr3TpXi861yzjo16Dn4hUox07iw5AyeMLHWsujkjzvRQ==
-  dependencies:
-    is-path-inside "^2.1.0"
 
 is-path-inside@^1.0.0:
   version "1.0.1"
@@ -7929,13 +7927,6 @@ is-path-inside@^1.0.0:
   integrity sha512-qhsCR/Esx4U4hg/9I19OVUAJkGWtjRYHMRgUMZE2TDdj+Ag+kttZanLupfddNyglzz50cUlmWzUaI37GDfNx/g==
   dependencies:
     path-is-inside "^1.0.1"
-
-is-path-inside@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npmmirror.com/is-path-inside/-/is-path-inside-2.1.0.tgz#7c9810587d659a40d27bcdb4d5616eab059494b2"
-  integrity sha512-wiyhTzfDWsvwAW53OBWF5zuvaOGlZ6PwYxAbPVDhpm+gM09xKQGjBq/8uYN12aDvMxnAnq3dxTyoSoRNmg5YFg==
-  dependencies:
-    path-is-inside "^1.0.2"
 
 is-plain-obj@^1.0.0, is-plain-obj@^1.1.0:
   version "1.1.0"
