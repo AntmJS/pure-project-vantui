@@ -1,11 +1,13 @@
 /* eslint-disable import/no-commonjs */
-const path = require('path')
+/* eslint-disable @typescript-eslint/no-var-requires */
+const npath = require('path')
+const pkg = require('../package.json')
 const miniChain = require('./webpack/miniChain')
 const h5Chain = require('./webpack/h5Chain')
 
 const config = {
-  projectName: 'pure-project-vantui',
-  date: '2022-1-23',
+  projectName: pkg.name,
+  date: '2022-8-10',
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
@@ -13,14 +15,15 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: process.env.TARO_ENV === 'h5' ? 'dist' : process.env.TARO_ENV,
+  outputRoot: process.env.TARO_ENV === 'h5' ? 'build' : process.env.TARO_ENV,
   alias: {
-    '@': path.resolve(process.cwd(), 'src'),
-    react: path.resolve(process.cwd(), './node_modules/react'),
+    '@babel/runtime-corejs3/regenerator': npath.resolve(
+      process.cwd(),
+      './node_modules/regenerator-runtime',
+    ),
+    '@': npath.resolve(process.cwd(), 'src'),
   },
   defineConstants: {
-    // 解决Recoil报错问题
-    Window: 'function () {}',
   },
   copy: {
     patterns: [
@@ -29,35 +32,44 @@ const config = {
     }
   },
   framework: 'react',
+  compiler: {
+    type: 'webpack5',
+    prebundle: {
+      // 暂时不要开启，开启会报错
+      enable: false,
+    },
+  },
+  cache: {
+    enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+  },
   mini: {
-    webpackChain (chain) {
+    webpackChain(chain) {
       miniChain(chain)
     },
     lessLoaderOption: {
       lessOptions: {
         modifyVars: {
-          hack: `true; @import "${path.join(
+          hack: `true; @import "${npath.join(
             process.cwd(),
-            'src/style/index.less',
-          )}";${process.env.TARO_ENV === 'kwai' ? `@import "${path.join(
-            process.cwd(),
-            'src/style/kwai.less',
-          )}";` : ''}`,
+            'src/styles/index.less',
+          )}";${
+            process.env.TARO_ENV === 'kwai'
+              ? `@import "${npath.join(
+                  process.cwd(),
+                  'src/styles/kwai.less',
+                )}";`
+              : ''
+          }`,
         },
       },
       // 适用于全局引入样式
-      // additionalData: "@import '~/src/style/index.less';",
+      // additionalData: "@import '~/src/styles/index.less';",
     },
     postcss: {
-      autoprefixer: {
-        enable: true,
-        config: {
-          // autoprefixer 配置项
-        },
-      },
       pxtransform: {
         enable: true,
         config: {
+
         }
       },
       url: {
@@ -79,21 +91,23 @@ const config = {
     },
   },
   h5: {
-    webpackChain (chain) {
+    webpackChain(chain) {
       h5Chain(chain)
     },
     esnextModules: [/@antmjs[\\/]vantui/],
     lessLoaderOption: {
       lessOptions: {
         modifyVars: {
-          hack: `true; @import "${path.join(
+          // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
+          hack: `true; @import "${npath.join(
             process.cwd(),
-            'src/style/index.less',
+            'src/styles/index.less',
           )}";`,
         },
       },
-      // 适用于全局引入样式
-      // additionalData: "@import '~/src/style/index.less';",
+    },
+    router: {
+      mode: 'browser',
     },
     publicPath: '/',
     staticDirectory: 'static',
@@ -102,10 +116,6 @@ const config = {
         enable: true,
         config: {
         }
-      },
-      pxtransform: {
-        enable: true,
-        config: {},
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
@@ -116,18 +126,25 @@ const config = {
       }
     },
     miniCssExtractPluginOption: {
-      ignoreOrder: true,
+      ignoreOrder: false,
+      filename: 'assets/css/[name].css',
+      chunkFilename: 'assets/css/chunk/[name].css',
     },
+  },
+  rn: {
+    appName: 'taroDemo',
+    postcss: {
+      cssModules: {
+        enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+      }
+    }
   },
   plugins: [
     '@tarojs/plugin-platform-alipay-dd',
-    '@tarojs/plugin-platform-kwai',
+    ['@tarojs/plugin-platform-kwai'],
   ],
 }
 
 module.exports = function (merge) {
-  if (process.env.NODE_ENV === 'development') {
-    return merge({}, config, require('./dev'))
-  }
-  return merge({}, config, require('./prod'))
+  return merge({}, config, require(`./${process.env.NODE_ENV}`))
 }

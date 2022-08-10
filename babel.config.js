@@ -3,11 +3,14 @@
 // https://github.com/NervJS/taro/blob/next/packages/babel-preset-taro/README.md
 module.exports = {
   presets: [
-    ['taro', {
-      framework: 'react',
-      ts: true,
-      useBuiltIns: 'usage',
-    }]
+    [
+      'taro',
+      {
+        framework: 'react',
+        ts: true,
+        useBuiltIns: 'usage',
+      },
+    ],
   ],
   plugins: [
     [
@@ -18,6 +21,6 @@ module.exports = {
         style: (name) => `${name}/style/less`,
       },
       '@antmjs/vantui',
-    ]
+    ],
   ],
 }
