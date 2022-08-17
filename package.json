@@ -37,7 +37,7 @@
   ],
   "author": "",
   "dependencies": {
-    "@antmjs/mini-fix": "^1.21.2",
+    "@antmjs/mini-fix": "^1.21.3",
     "@antmjs/vantui": "^1.9.21",
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "3.5.3",
@@ -61,8 +61,8 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@antmjs/plugin-global-fix": "^1.21.2",
-    "@antmjs/plugin-mini-fix": "^1.21.2",
+    "@antmjs/plugin-global-fix": "^1.21.3",
+    "@antmjs/plugin-mini-fix": "^1.21.3",
     "@babel/core": "^7.8.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@tarojs/cli": "3.5.3",

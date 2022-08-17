@@ -10,28 +10,28 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@antmjs/mini-fix@^1.21.2":
-  version "1.21.2"
-  resolved "https://registry.npmmirror.com/@antmjs/mini-fix/-/mini-fix-1.21.2.tgz#0a101f8a6cd773cb433eee4ca0b03433e9a54197"
-  integrity sha512-x1lNs/WkjjZa7XwtsHgnPhvoo/k8S4RP2OPq//16PJR4GqRvulDqmKKvB0e0zCDQP+Yicv8yUEBavPeMiJHprg==
+"@antmjs/mini-fix@^1.21.3":
+  version "1.21.3"
+  resolved "https://registry.npmmirror.com/@antmjs/mini-fix/-/mini-fix-1.21.3.tgz#a326fa44de7f63bea3ed90aaae8991148f19ff8c"
+  integrity sha512-ujdemtxOiJR4fptVRrlFUQ5ip6Z0GYszZu4BmOVDH4ke45KgRWzkE8rOy9SVyPrVNblhhwYe4DaeTAZIRqKo7Q==
   dependencies:
-    "@antmjs/utils" "1.21.2"
+    "@antmjs/utils" "1.21.3"
     "@babel/runtime-corejs3" "^7.14.7"
 
-"@antmjs/plugin-global-fix@^1.21.2":
-  version "1.21.2"
-  resolved "https://registry.npmmirror.com/@antmjs/plugin-global-fix/-/plugin-global-fix-1.21.2.tgz#de4afb2e049f3239a4ecb8ab896e66d9324a2309"
-  integrity sha512-NjBoSx8wkSVk80OKPG5RlJEnxVs+lLNgEvOlX+b6AoJhTscHBCL92hPkgm1c+grdj7fjVa5lQBRwEn9tOwrz4w==
+"@antmjs/plugin-global-fix@^1.21.3":
+  version "1.21.3"
+  resolved "https://registry.npmmirror.com/@antmjs/plugin-global-fix/-/plugin-global-fix-1.21.3.tgz#14d9ac9c70362cecd9f3b75daf8e8702e8c7515a"
+  integrity sha512-VDKe44qrqG9+W62gVn63wZkp17AFpTCz9U+j/3HDq0d9UXPaGfkGm/92J/i46/GkHfk/8IWUHF/OrmOt1kyP5w==
 
-"@antmjs/plugin-mini-fix@^1.21.2":
-  version "1.21.2"
-  resolved "https://registry.npmmirror.com/@antmjs/plugin-mini-fix/-/plugin-mini-fix-1.21.2.tgz#c9df5dfcda1218347a616005bb8a416794ce4fa3"
-  integrity sha512-UHCCsQ6MP4O+9tzZ0u+rxCvgeyrRVwcjXVqe4EqO9ukK0hYbg5gMt9ryoAIcQ+bLtR711v4dRTjD1MyfXDYdKQ==
+"@antmjs/plugin-mini-fix@^1.21.3":
+  version "1.21.3"
+  resolved "https://registry.npmmirror.com/@antmjs/plugin-mini-fix/-/plugin-mini-fix-1.21.3.tgz#7973090361fc966424bfaadd581b07ae68b4722d"
+  integrity sha512-huz/HwIpFt4xH0gqKI+66eN6rgQLbZRV9zHokZdHLH72Iq4yFU5VP0+8jdVnwGK4xdnMyGK2XDtA8vdqtM8bxw==
 
-"@antmjs/utils@1.21.2":
-  version "1.21.2"
-  resolved "https://registry.npmmirror.com/@antmjs/utils/-/utils-1.21.2.tgz#2f7355406ea7b747e0e198d6be4f1d64d837d81f"
-  integrity sha512-VtS3upOAa7Rve61gjEOejBBS6P4x1Ro9M85EsFlBkpSEe2e1lHKV5VoS2Cqmfdmqq9GBXdLT07htLiHXMWG0Dw==
+"@antmjs/utils@1.21.3":
+  version "1.21.3"
+  resolved "https://registry.npmmirror.com/@antmjs/utils/-/utils-1.21.3.tgz#d1671532c800844ac6859b879f2f9c2811ce8a79"
+  integrity sha512-gF0NDYADDl0zSUAMF0YZdQulbgVAAtiM9VE6tPqauLYSz7RYjJVvGyCLWRn5t6WE0zIXfZJNZy/eh9DBZvgc4A==
   dependencies:
     "@babel/runtime-corejs3" "^7.14.7"
 
