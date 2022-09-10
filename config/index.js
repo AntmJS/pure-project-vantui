@@ -97,6 +97,9 @@ const config = {
   h5: {
     webpackChain(chain) {
       h5Chain(chain)
+      if (process.env.NODE_ENV === 'production') {
+        chain.performance.maxEntrypointSize(1000000).maxAssetSize(512000)
+      }
     },
     esnextModules: [/@antmjs[\\/]vantui/],
     lessLoaderOption: {
@@ -130,7 +133,7 @@ const config = {
       }
     },
     miniCssExtractPluginOption: {
-      ignoreOrder: false,
+      ignoreOrder: true,
       filename: 'assets/css/[name].css',
       chunkFilename: 'assets/css/chunk/[name].css',
     },
