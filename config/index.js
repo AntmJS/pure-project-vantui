@@ -147,6 +147,7 @@ const config = {
     }
   },
   plugins: [
+    ['@tarojs/plugin-framework-react', { reactMode: 'concurrent' }],
     '@tarojs/plugin-platform-alipay-dd',
     ['@tarojs/plugin-platform-kwai'],
   ],
