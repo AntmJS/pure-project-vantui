@@ -38,7 +38,7 @@
   "author": "",
   "dependencies": {
     "@antmjs/mini-fix": "^2.1.0",
-    "@antmjs/vantui": "^2.2.2",
+    "@antmjs/vantui": "^2.2.3",
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "3.5.6",
     "@tarojs/helper": "3.5.6",
