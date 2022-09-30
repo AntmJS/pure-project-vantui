@@ -10,27 +10,27 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@antmjs/mini-fix@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.npmmirror.com/@antmjs/mini-fix/-/mini-fix-2.1.0.tgz#98b53504ec487f85726db743f326947243e8c141"
-  integrity sha512-gQU4V7SjgWw4QFLvi7Kv9nyHtQ5xFR9x54oBHaK8pvwtI9sKX7Sas3qZMgKVRn4ZS8bKSd9BfzgnHtP0MVj6Qg==
+"@antmjs/mini-fix@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.npmmirror.com/@antmjs/mini-fix/-/mini-fix-2.1.1.tgz#2f03b0c20eacb60d314debea6006c7e0b1db152e"
+  integrity sha512-ChuQ3rqYccn5JQtk8Q5QZrCcYnTu4drgO4okEm9o7rZHk07JDvgzBKPxjsxYbmJjnFpp4UZgPvZVYB6Hm7B29w==
   dependencies:
-    "@antmjs/utils" "2.1.0"
+    "@antmjs/utils" "2.1.1"
 
-"@antmjs/plugin-global-fix@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.npmmirror.com/@antmjs/plugin-global-fix/-/plugin-global-fix-2.1.0.tgz#4a4cb5297aae0df5ffa1a8245160b29f6c532d8c"
-  integrity sha512-YlkZ2JBs2AcsX88I2WgXTaC0PcJpJ95A5NxPvtkIibx8W+8McSOyuJEyuVrVsj6ltOY322+JiWysV6fzugZeOg==
+"@antmjs/plugin-global-fix@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.npmmirror.com/@antmjs/plugin-global-fix/-/plugin-global-fix-2.1.1.tgz#2f78fb6c42d593c6f054e161523a215ec59fbca8"
+  integrity sha512-pXw1vr9n2vBximJVPNNUaF8kSIGNGEwMejVywhIp5Ek5ILjWXUdTyE/KdOWascT99ZdVJqQ51XDJoUL6ojPnfA==
 
-"@antmjs/plugin-mini-fix@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.npmmirror.com/@antmjs/plugin-mini-fix/-/plugin-mini-fix-2.1.0.tgz#2bb4a3151f46045dfeb7910d57a50bf2fda57cae"
-  integrity sha512-no7185LElucSPgPRwu2Z+rq0RHJjCD0fKg5vm3lXMcR1jPhUqTzSENxbsAgC8zkLokXc9OxKqWG0NLT0jy+iug==
+"@antmjs/plugin-mini-fix@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.npmmirror.com/@antmjs/plugin-mini-fix/-/plugin-mini-fix-2.1.1.tgz#b4e46b9be886019dfaa0d658f8f5edef6f81fb45"
+  integrity sha512-GzZLsI+Gkor/a9ntdOtVm9toy7nOtCMrxmHLZz9sU1KlHzvqaASeZxKVG8UgvP8Aly3oeegWhp4IL6IAnLQKmg==
 
-"@antmjs/utils@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.npmmirror.com/@antmjs/utils/-/utils-2.1.0.tgz#cac1eec598fcd8795a2b93d6f4af8651029f9cf6"
-  integrity sha512-iePDKwbLONhYC9A9AHjrnxg6ucr5cbbco+GCVQWCtCguZIKMYMzFI9DhXnnY+GR98iaAwWkMqzsb2f9ypD5VRA==
+"@antmjs/utils@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.npmmirror.com/@antmjs/utils/-/utils-2.1.1.tgz#1d6edb8465416fae16942425870db4fd4c1bfdd0"
+  integrity sha512-6B8WRUpjTgIIi6BAuYkrcn8GSRnbfJJa7ivIgUJXaQkv6qwe3hyHymdfMunQjRbBgK8saIpnyjmZ+Myg5WimrA==
 
 "@antmjs/vantui@^2.2.3":
   version "2.2.3"
