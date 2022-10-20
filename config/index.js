@@ -109,6 +109,9 @@ const config = {
     router: {
       mode: 'browser',
     },
+    devServer: {
+      hot: false,
+    },
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
