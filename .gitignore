@@ -7,6 +7,7 @@ qq/
 tt/
 swan/
 deploy_versions/
+.swc/
 .temp/
 .rn_temp/
 node_modules/

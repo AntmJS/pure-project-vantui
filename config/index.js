@@ -17,14 +17,6 @@ const config = {
   sourceRoot: 'src',
   outputRoot: process.env.TARO_ENV === 'h5' ? 'build' : process.env.TARO_ENV,
   alias: {
-    '@babel/runtime-corejs3/regenerator': npath.resolve(
-      process.cwd(),
-      './node_modules/regenerator-runtime',
-    ),
-    '@babel/runtime/regenerator': npath.resolve(
-      process.cwd(),
-      './node_modules/regenerator-runtime',
-    ),
     '@': npath.resolve(process.cwd(), 'src'),
   },
   defineConstants: {
@@ -36,13 +28,7 @@ const config = {
     }
   },
   framework: 'react',
-  compiler: {
-    type: 'webpack5',
-    prebundle: {
-      // 暂时不要开启，开启会报错
-      enable: false,
-    },
-  },
+  compiler: 'webpack5',
   cache: {
     enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
