@@ -10,6 +10,13 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@antmjs/mini-fix@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/@antmjs/mini-fix/-/mini-fix-2.2.1.tgz#3b58877344d283b1dab308fb8dcb7f0f028b2073"
+  integrity sha512-iK+wFOkue1ByYCbA85JbvBAUhGKNbK0C/IDj1ED/tlllj1gjKMDv9fxd2ANxQ+KRrHEKPK7PaZOPxqQYlSn1BA==
+  dependencies:
+    "@antmjs/utils" "2.2.1"
+
 "@antmjs/plugin-global-fix@^2.2.1":
   version "2.2.1"
   resolved "https://registry.npmmirror.com/@antmjs/plugin-global-fix/-/plugin-global-fix-2.2.1.tgz#b96bb67f4c0bcf1a3d2e976067ccaf7592841637"
@@ -24,6 +31,11 @@
   version "2.2.1"
   resolved "https://registry.npmmirror.com/@antmjs/plugin-mini-fix/-/plugin-mini-fix-2.2.1.tgz#653ed2f7d1c635ba06b7f306985cda74f0920daf"
   integrity sha512-cXJtxd7g971c/L4bp3+dzaMK/98F1iL+YIIQ5G763OeBImembZwJiQ2m+3I5ExTaUHx0SOvHcdIXKFgU7VSEoA==
+
+"@antmjs/utils@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/@antmjs/utils/-/utils-2.2.1.tgz#6e85972739f34f852139e2f323a0440486b66c58"
+  integrity sha512-ihqH2wTI7HEFXWgnqJggOT80kogjce6nvwjPwFpc6pACKTg3E0KWSKA/s47xCIEfHjdsYfERr3rqLmepYyeCHg==
 
 "@antmjs/vantui@^2.5.1":
   version "2.5.1"
