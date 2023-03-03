@@ -37,11 +37,12 @@
   resolved "https://registry.npmjs.org/@antmjs/utils/-/utils-2.2.1.tgz#6e85972739f34f852139e2f323a0440486b66c58"
   integrity sha512-ihqH2wTI7HEFXWgnqJggOT80kogjce6nvwjPwFpc6pACKTg3E0KWSKA/s47xCIEfHjdsYfERr3rqLmepYyeCHg==
 
-"@antmjs/vantui@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.npmmirror.com/@antmjs/vantui/-/vantui-2.5.1.tgz#bdb03b2d2bbab8edc2f277ba3aebe68f13776d38"
-  integrity sha512-TEa0R/ESYs51w6tEvxo+KxFsiBHXEB7hSgKL0NTo5xYwNtlbUbOYiLboTndBJUwl7Q/xPMJBj4W0S2IzMBeKgg==
+"@antmjs/vantui@^2.5.3":
+  version "2.5.3"
+  resolved "https://registry.npmmirror.com/@antmjs/vantui/-/vantui-2.5.3.tgz#bc745953dca1c973701dd25fe682ea662000c089"
+  integrity sha512-hjY/B3lKbc9amvDIOGtKauLh1O6Jk+4OFIVvIHldiqYJhWW2PMEGjk/k8JRczIKRR3pGYMRKi8lzRxA7u5sAcw==
   dependencies:
+    "@swc/helpers" "^0.4.14"
     "@vant/icons" "^1.7.1"
     classnames "^2.3.1"
     dayjs "^1.10.6"
@@ -1498,6 +1499,13 @@
     "@swc/core-win32-arm64-msvc" "1.3.35"
     "@swc/core-win32-ia32-msvc" "1.3.35"
     "@swc/core-win32-x64-msvc" "1.3.35"
+
+"@swc/helpers@^0.4.14":
+  version "0.4.14"
+  resolved "https://registry.npmmirror.com/@swc/helpers/-/helpers-0.4.14.tgz#1352ac6d95e3617ccb7c1498ff019654f1e12a74"
+  integrity sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==
+  dependencies:
+    tslib "^2.4.0"
 
 "@swc/register@^0.1.10":
   version "0.1.10"
@@ -11620,7 +11628,7 @@ tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
   resolved "https://registry.npmmirror.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.3, tslib@^2.3.0:
+tslib@^2.0.3, tslib@^2.3.0, tslib@^2.4.0:
   version "2.5.0"
   resolved "https://registry.npmmirror.com/tslib/-/tslib-2.5.0.tgz#42bfed86f5787aeb41d031866c8f402429e0fddf"
   integrity sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==
