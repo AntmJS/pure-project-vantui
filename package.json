@@ -30,11 +30,14 @@
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "dev:kwai": "npm run build:kwai -- --watch"
   },
-  "browserslist": [
-    "last 3 versions",
-    "Android >= 4.1",
-    "ios >= 8"
-  ],
+  "browserslist": {
+    "production": [
+      "ios >= 9"
+    ],
+    "development": [
+      "last 1 version"
+    ]
+  },
   "author": "",
   "dependencies": {
     "@antmjs/mini-fix": "^2.2.1",
