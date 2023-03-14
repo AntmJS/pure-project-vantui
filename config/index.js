@@ -5,9 +5,8 @@ const pkg = require("../package.json");
 const miniChain = require("./webpack/miniChain");
 const h5Chain = require("./webpack/h5Chain");
 
-const TARO_ENV = process.env.TARO_ENV || "weapp";
-let NODE_ENV = process.env.NODE_ENV;
-NODE_ENV = NODE_ENV === "undefined" || !NODE_ENV ? "production" : NODE_ENV;
+process.env.TARO_ENV = process.env.TARO_ENV ?? "weapp"
+process.env.NODE_ENV = process.env.NODE_ENV ?? 'production'
 
 const config = {
   projectName: pkg.name,
@@ -19,7 +18,7 @@ const config = {
     828: 1.81 / 2,
   },
   sourceRoot: "src",
-  outputRoot: TARO_ENV === "h5" ? "build" : TARO_ENV,
+  outputRoot: process.env.TARO_ENV === "h5" ? "build" : process.env.TARO_ENV,
   alias: {
     "@": npath.resolve(process.cwd(), "src"),
   },
@@ -134,5 +133,5 @@ const config = {
 };
 
 module.exports = function (merge) {
-  return merge({}, config, require(`./${NODE_ENV}`));
+  return merge({}, config, require(`./${process.env.NODE_ENV}`));
 };
