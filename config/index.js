@@ -1,47 +1,48 @@
 /* eslint-disable import/no-commonjs */
 /* eslint-disable @typescript-eslint/no-var-requires */
-const npath = require('path')
-const pkg = require('../package.json')
-const miniChain = require('./webpack/miniChain')
-const h5Chain = require('./webpack/h5Chain')
+const npath = require("path");
+const pkg = require("../package.json");
+const miniChain = require("./webpack/miniChain");
+const h5Chain = require("./webpack/h5Chain");
+
+const TARO_ENV = process.env.TARO_ENV || "weapp";
+let NODE_ENV = process.env.NODE_ENV;
+NODE_ENV = NODE_ENV === "undefined" || !NODE_ENV ? "production" : NODE_ENV;
 
 const config = {
   projectName: pkg.name,
-  date: '2022-8-10',
+  date: "2022-8-10",
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
     750: 1,
-    828: 1.81 / 2
+    828: 1.81 / 2,
   },
-  sourceRoot: 'src',
-  outputRoot: process.env.TARO_ENV === 'h5' ? 'build' : process.env.TARO_ENV,
+  sourceRoot: "src",
+  outputRoot: TARO_ENV === "h5" ? "build" : TARO_ENV,
   alias: {
-    '@': npath.resolve(process.cwd(), 'src'),
+    "@": npath.resolve(process.cwd(), "src"),
   },
-  defineConstants: {
-  },
+  defineConstants: {},
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {},
   },
-  framework: 'react',
-  compiler: 'webpack5',
+  framework: "react",
+  compiler: "webpack5",
   cache: {
-    enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+    enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
   mini: {
     webpackChain(chain) {
-      miniChain(chain)
+      miniChain(chain);
     },
     lessLoaderOption: {
       lessOptions: {
         modifyVars: {
           hack: `true; @import "${npath.join(
             process.cwd(),
-            'src/styles/index.less',
+            "src/styles/index.less"
           )}";`,
         },
       },
@@ -51,23 +52,21 @@ const config = {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {
-
-        }
+        config: {},
       },
       url: {
         enable: true,
         config: {
-          limit: 1024 // 设定转换尺寸上限
-        }
+          limit: 1024, // 设定转换尺寸上限
+        },
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
         config: {
-          namingPattern: 'module', // 转换模式，取值为 global/module
-          generateScopedName: '[name]__[local]___[hash:base64:5]'
-        }
-      }
+          namingPattern: "module", // 转换模式，取值为 global/module
+          generateScopedName: "[name]__[local]___[hash:base64:5]",
+        },
+      },
     },
     miniCssExtractPluginOption: {
       ignoreOrder: true,
@@ -75,9 +74,9 @@ const config = {
   },
   h5: {
     webpackChain(chain) {
-      h5Chain(chain)
-      if (process.env.NODE_ENV === 'production') {
-        chain.performance.maxEntrypointSize(1000000).maxAssetSize(512000)
+      h5Chain(chain);
+      if (process.env.NODE_ENV === "production") {
+        chain.performance.maxEntrypointSize(1000000).maxAssetSize(512000);
       }
     },
     esnextModules: [/@antmjs[\\/]vantui/],
@@ -87,54 +86,53 @@ const config = {
           // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
           hack: `true; @import "${npath.join(
             process.cwd(),
-            'src/styles/index.less',
+            "src/styles/index.less"
           )}";`,
         },
       },
     },
     router: {
-      mode: 'browser',
+      mode: "browser",
     },
     devServer: {
       hot: false,
     },
-    publicPath: '/',
-    staticDirectory: 'static',
+    publicPath: "/",
+    staticDirectory: "static",
     postcss: {
       autoprefixer: {
         enable: true,
-        config: {
-        }
+        config: {},
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
         config: {
-          namingPattern: 'module', // 转换模式，取值为 global/module
-          generateScopedName: '[name]__[local]___[hash:base64:5]'
-        }
-      }
+          namingPattern: "module", // 转换模式，取值为 global/module
+          generateScopedName: "[name]__[local]___[hash:base64:5]",
+        },
+      },
     },
     miniCssExtractPluginOption: {
       ignoreOrder: true,
-      filename: 'assets/css/[name].css',
-      chunkFilename: 'assets/css/chunk/[name].css',
+      filename: "assets/css/[name].css",
+      chunkFilename: "assets/css/chunk/[name].css",
     },
   },
   rn: {
-    appName: 'taroDemo',
+    appName: "taroDemo",
     postcss: {
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
-      }
-    }
+      },
+    },
   },
   plugins: [
-    ['@tarojs/plugin-framework-react', { reactMode: 'concurrent' }],
-    '@tarojs/plugin-platform-alipay-dd',
-    ['@tarojs/plugin-platform-kwai'],
+    ["@tarojs/plugin-framework-react", { reactMode: "concurrent" }],
+    "@tarojs/plugin-platform-alipay-dd",
+    ["@tarojs/plugin-platform-kwai"],
   ],
-}
+};
 
 module.exports = function (merge) {
-  return merge({}, config, require(`./${process.env.NODE_ENV || 'production'}`))
-}
+  return merge({}, config, require(`./${NODE_ENV}`));
+};
