@@ -1,4 +1,5 @@
 /* eslint-disable import/no-commonjs */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const H5FixPlugin = require('@antmjs/plugin-h5-fix')
 const commonChain = require('./commonChain')
 

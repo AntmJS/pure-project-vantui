@@ -7,6 +7,7 @@ const h5Chain = require("./webpack/h5Chain");
 
 process.env.TARO_ENV = process.env.TARO_ENV ?? "weapp"
 process.env.NODE_ENV = process.env.NODE_ENV ?? 'production'
+process.env.API_ENV = process.env.API_ENV ?? 'real'
 
 const config = {
   projectName: pkg.name,
